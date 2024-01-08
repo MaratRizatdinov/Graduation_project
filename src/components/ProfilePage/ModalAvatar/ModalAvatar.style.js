@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import exit from './exit.png'
-import exit_hover from './exit-hover.png'
+import exit from '../../../images/exit.png'
+import exit_hover from '../../../images/exit-hover.png'
 
 export const ModalForm = styled.div`
   --modal-width: 366px;

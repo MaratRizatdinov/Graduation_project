@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import * as S from './Navigation.style'
-import logotype from './logotype.svg'
+import logotype from '../../../images/logotype.svg'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { addSubstring } from '../../../redux/reducers/searchSlice'

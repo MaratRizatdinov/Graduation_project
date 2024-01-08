@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import * as S from './ModalAdv.style'
 import { ModalSVG } from './ModalSVG'
 import { useNavigate, useParams } from 'react-router-dom'
-import small_logo from './logo-mob.svg'
+import small_logo from '../../images/logo-mob.svg'
 import {
   useAddImgMutation,
   useDeleteImgMutation,
@@ -11,7 +11,7 @@ import {
   useAddAdvMutation,
 } from '../../redux/reducers/adsApi'
 import { Footer } from '../Footer/footer'
-import arrow from './Vector.svg'
+import arrow from '../../images/Vector.svg'
 
 export const ModalAdv = ({ modal, setModal, role }) => {
   const advId = useParams().id

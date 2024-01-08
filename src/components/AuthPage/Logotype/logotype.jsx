@@ -1,8 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import * as S from './Logotype.style'
-import logo from './logo.svg'
-
+import logo from '../../../images/logo.svg'
 
 export const Logotype = () => {
   const navigate = useNavigate()

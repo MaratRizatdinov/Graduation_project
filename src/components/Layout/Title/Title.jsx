@@ -3,7 +3,7 @@ import * as S from './Title.style'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import arrow from './Vector.svg'
+import arrow from '../../../images/Vector.svg'
 
 export const Title = () => {
   const page = useLocation().pathname

@@ -1,8 +1,8 @@
 import React from 'react'
 import * as S from './footer.style'
-import home from './home.svg'
-import circle from './circle.svg'
-import profile from './profile.svg'
+import home from '../../images/home.svg'
+import circle from '../../images/circle.svg'
+import profile from '../../images/profile.svg'
 import { useNavigate, useLocation } from 'react-router-dom'
 
 export const Footer = ({setModal, blocked}) => {

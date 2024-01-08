@@ -8,9 +8,9 @@ import {
 } from '../../../redux/reducers/searchSlice'
 import { ModalAdv } from '../../ModalAdv/ModalAdv'
 import { getAuthorization } from '../../../scripts/tools'
-import exit from './exit.svg'
+import exit from '../../../images/exitApp.svg'
 import { exitFromApp } from '../../../redux/reducers/userSlice'
-import small_logo from './logo-mob.svg'
+import small_logo from '../../../images/logo-mob.svg'
 
 export const Header = ({modal, setModal}) => {
   const navigate = useNavigate()

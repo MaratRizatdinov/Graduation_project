@@ -5,9 +5,9 @@ import { useGetAdvCommentsQuery } from '../../../redux'
 import { getAuthorization } from '../../../scripts/tools'
 import { useAddCommentMutation } from '../../../redux'
 import { createCommentDate } from '../../../scripts/tools'
-import small_logo from '../../ModalAdv/logo-mob.svg'
+import small_logo from '../../../images/logo-mob.svg'
 import { Footer } from '../../Footer/footer'
-import arrow from './Vector.svg'
+import arrow from '../../../images/Vector.svg'
 
 export const ModalComments = ({ modal, setModal }) => {
   const isAuthUser = getAuthorization()

@@ -8,7 +8,7 @@ import { useAddUserMutation } from '../../redux/reducers/authApi'
 import { useGetTokensMutation } from '../../redux/reducers/authApi'
 import { useDispatch } from 'react-redux'
 import { logInApp } from '../../redux/reducers/userSlice'
-import  small_logo from './logo-mob.svg'
+import  small_logo from '../../images/logo-mob.svg'
 import { Footer } from '../Footer/footer'
 
 
