@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import * as S from './AdvPage.style'
 import { useGetAdvCommentsQuery, useGetAdvQuery } from '../../redux'
@@ -34,7 +34,24 @@ export const AdvPage = () => {
     navigate(-1)
   }
 
-  useEffect(() => {}, [])
+  const listOfBarItems = (count) => {
+    let result = []
+    for (let i = 0; i < count; i++) {
+      result.push(
+        <S.AdvBarImg key={i} id={i} onClick={() => setMainUrl(i)} current={mainUrl}>
+          <S.SmallImg
+            src={
+              adv &&
+              adv.images[i] &&
+              `http://localhost:8090/${adv.images[i].url}`
+            }
+            alt=""            
+          />
+        </S.AdvBarImg>,
+      )
+    }
+    return result
+  }
 
   return (
     <>
@@ -60,7 +77,7 @@ export const AdvPage = () => {
                   }
                   alt=""
                   onClick={() => {
-                    if (mainUrl == 4) {
+                    if (mainUrl === 4) {
                       setMainUrl(0)
                     } else setMainUrl((prev) => prev + 1)
                   }}
@@ -73,84 +90,7 @@ export const AdvPage = () => {
                   <S.BarPoint current={mainUrl} point={4}></S.BarPoint>
                 </S.BarPointsContainer>
               </S.AdvMainImgCont>
-              <S.AdvBar>
-                <S.AdvBarImg
-                  id={0}
-                  onClick={() => setMainUrl(0)}
-                  current={mainUrl}
-                >
-                  <img
-                    src={
-                      adv &&
-                      adv.images[0] &&
-                      `http://localhost:8090/${adv.images[0].url}`
-                    }
-                    alt=""
-                    style={{ width: '88px', height: '88px' }}
-                  />
-                </S.AdvBarImg>
-
-                <S.AdvBarImg
-                  id={1}
-                  onClick={() => setMainUrl(1)}
-                  current={mainUrl}
-                >
-                  <img
-                    src={
-                      adv &&
-                      adv.images[1] &&
-                      `http://localhost:8090/${adv.images[1].url}`
-                    }
-                    alt=""
-                    style={{ width: '88px', height: '88px' }}
-                  />
-                </S.AdvBarImg>
-                <S.AdvBarImg
-                  id={2}
-                  onClick={() => setMainUrl(2)}
-                  current={mainUrl}
-                >
-                  <img
-                    src={
-                      adv &&
-                      adv.images[2] &&
-                      `http://localhost:8090/${adv.images[2].url}`
-                    }
-                    alt=""
-                    style={{ width: '88px', height: '88px' }}
-                  />
-                </S.AdvBarImg>
-                <S.AdvBarImg
-                  id={3}
-                  onClick={() => setMainUrl(3)}
-                  current={mainUrl}
-                >
-                  <img
-                    src={
-                      adv &&
-                      adv.images[3] &&
-                      `http://localhost:8090/${adv.images[3].url}`
-                    }
-                    alt=""
-                    style={{ width: '88px', height: '88px' }}
-                  />
-                </S.AdvBarImg>
-                <S.AdvBarImg
-                  id={4}
-                  onClick={() => setMainUrl(4)}
-                  current={mainUrl}
-                >
-                  <img
-                    src={
-                      adv &&
-                      adv.images[4] &&
-                      `http://localhost:8090/${adv.images[4].url}`
-                    }
-                    alt=""
-                    style={{ width: '88px', height: '88px' }}
-                  />
-                </S.AdvBarImg>
-              </S.AdvBar>
+              <S.AdvBar>{listOfBarItems(5)}</S.AdvBar>
             </S.AdvFillImg>
           </S.AdvLeftSide>
           <S.AdvRightSide>

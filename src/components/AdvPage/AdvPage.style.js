@@ -54,25 +54,24 @@ export const AdvMainImgCont = styled.div`
 `
 export const BarPointsContainer = styled.div`
   width: 68px;
-  height: 8px;  
-  top:285px;
-  left:115px;
-  position:absolute;
-  display:none;
+  height: 8px;
+  top: 285px;
+  left: 115px;
+  position: absolute;
+  display: none;
   @media (max-width: 320px) {
-    display:flex;
+    display: flex;
     justify-content: space-between;
   }
 `
 export const BarPoint = styled.div`
   width: 8px;
   height: 8px;
-  border-radius:3px;  
-  border: 1px solid #FFF;  
-  background-color:${(props)=>props.current==props.point ? '#FFF':'inherit'};
-  
+  border-radius: 3px;
+  border: 1px solid #fff;
+  background-color: ${(props) =>
+    props.current == props.point ? '#FFF' : 'inherit'};
 `
-
 
 export const AdvMainImg = styled.img`
   width: 480px;
@@ -107,6 +106,11 @@ export const AdvBarImg = styled.div`
     props.id === props.current ? '2px solid #009ee4' : '2px solid #f0f0f0'};
   box-sizing: inline-box;
 `
+export const SmallImg = styled.img`
+  width: 88px;
+  height: 88px;
+`
+
 export const AdvRightSide = styled.div`
   max-width: 621px;
   display: flex;

@@ -14,9 +14,6 @@ export const SellerPage = () => {
   const currentUser = users
     ? users.filter((elem) => elem.id === Number(params.id))
     : null
-  // console.log(currentUser[0])
-
-  // useEffect(() => {}, [isLoading])
 
   return (
     <S.ProfileContainer>
@@ -26,7 +23,7 @@ export const SellerPage = () => {
             <S.ProfileImgContainer>
               <S.ProfileImg
                 src={users && `http://localhost:8090/${currentUser[0].avatar}`}
-                alt=""                
+                alt=""
               />
             </S.ProfileImgContainer>
           </S.ProfileLeft>
@@ -38,23 +35,27 @@ export const SellerPage = () => {
               {Tools.createTextSellsFrom(users && currentUser[0].sells_from)}
             </S.SellerInfo>
             <S.ProfileToMobile>
-            <S.ProfileImgContainer>
-              <S.ProfileImg
-                src={users && `http://localhost:8090/${currentUser[0].avatar}`}
-                alt=""                
-              />
-            </S.ProfileImgContainer>
-          </S.ProfileToMobile>
+              <S.ProfileImgContainer>
+                <S.ProfileImg
+                  src={
+                    users && `http://localhost:8090/${currentUser[0].avatar}`
+                  }
+                  alt=""
+                />
+              </S.ProfileImgContainer>
+            </S.ProfileToMobile>
 
             <S.SellerButton onClick={() => setOpen(true)}>
-             <p style={{textAlign:'center'}}> Показать&nbsp;телефон <br/>
-              {
-                <S.SellerPhone>
-                  {open
-                    ? users && currentUser[0].phone
-                    : users && Tools.maskPhone(currentUser[0].phone)}
-                </S.SellerPhone>
-              }
+              <p style={{ textAlign: 'center' }}>
+                {' '}
+                Показать&nbsp;телефон <br />
+                {
+                  <S.SellerPhone>
+                    {open
+                      ? users && currentUser[0].phone
+                      : users && Tools.maskPhone(currentUser[0].phone)}
+                  </S.SellerPhone>
+                }
               </p>
             </S.SellerButton>
           </S.ProfileRight>

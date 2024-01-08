@@ -75,7 +75,6 @@ export const ModalAdv = ({ modal, setModal, role }) => {
               addImg({ id: advId, body })
             }
           })
-
           .then(() => {
             setModal('unvisible')
             setTitle('')

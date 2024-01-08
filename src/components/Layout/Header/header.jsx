@@ -13,10 +13,10 @@ import { exitFromApp } from '../../../redux/reducers/userSlice'
 import small_logo from '../../../images/logo-mob.svg'
 
 export const Header = ({modal, setModal}) => {
+  
   const navigate = useNavigate()
   const page = useLocation().pathname
-  const dispatch = useDispatch()
-  // const [modal, setModal] = useState('unvisible')
+  const dispatch = useDispatch()  
   const isAuth = getAuthorization() || false
   const [value, setValue] = useState('')
 
